@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/form/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarBackgroundColor": "#0081ff",
+    "navigationBarTitleText": "ColorUi for UniApp",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "mescroll-body": "/components/mescroll-uni/mescroll-body",
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "cu-custom": "/colorui/components/cu-custom"
+  }
+}

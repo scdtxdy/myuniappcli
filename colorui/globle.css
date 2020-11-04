@@ -1,0 +1,8 @@
+.btu_bg{
+	background:linear-gradient(180deg,rgba(214,180,108,1) 0%,rgba(204,162,62,1) 100%);
+	border-radius:25px;
+}
+
+.cu-border-top {
+	border-top: 1upx solid #eee;
+}
