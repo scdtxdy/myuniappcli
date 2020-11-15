@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 840721 */
+  src: url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.eot');
+  src: url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.svg#iconfont') format('svg');
+}
+
+text[class*="icon-"],
+view[class*="icon-"],
+button[class*="icon-"] {
+  font-family: "iconfont";
+  font-size: inherit;
+  font-style: normal;
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Mask:before {
+  content: "\e633";
+}
+
+.icon-back:before {
+  content: "\e697";
+}
+
+.icon-car:before {
+  content: "\e602";
+}
+
+.icon-sousuo:before {
+  content: "\e693";
+}
+
+.icon-info-circle:before {
+  content: "\e77f";
+}
+
+.icon-check-circle:before {
+  content: "\e77e";
+}
+
+.icon-close-circle:before {
+  content: "\e77d";
+}
+

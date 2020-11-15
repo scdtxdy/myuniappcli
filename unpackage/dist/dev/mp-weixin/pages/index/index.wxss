@@ -102,7 +102,8 @@ view {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
-  border-radius: 6px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
   height: 48px;
   margin: 15px;
   background-color: #007AFF;
@@ -119,8 +120,10 @@ view {
   font-size: 14px;
   color: #666;
   border: 1px #e5e5e5 solid;
-  border-radius: 5px;
-  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .uni-input-border {
   padding: 0 10px;

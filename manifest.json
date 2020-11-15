@@ -51,6 +51,22 @@
             "ios" : {},
             /* SDK配置 */
             "sdkConfigs" : {}
+        },
+        "nativePlugins" : {
+            "TT-TRTCCloud" : {
+                "__plugin_info__" : {
+                    "name" : "TT-TRTCCloud",
+                    "description" : "直播sdk",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=1872",
+                    "android_package_name" : "scd.pupilman.cliub",
+                    "ios_bundle_id" : "scd.pupilman.cliub",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "1872",
+                    "parameters" : {}
+                }
+            }
         }
     },
     /* 快应用特有相关 */

@@ -115,8 +115,8 @@
 
 
 
-/* 注意要写在第一行，同时给style标签加入lang="scss"属性 */
-/*
+	/* 注意要写在第一行，同时给style标签加入lang="scss"属性 */
+	/*
   ColorUi for uniApp  v2.1.6 | by 文晓港 2019-05-31 10:44:24
   仅供学习交流，如作它用所承受的法律责任一概与作者无关  
   
@@ -124,7 +124,7 @@
   
   （QQ交流群：240787041）
 */
-/* ==================
+	/* ==================
         初始化
  ==================== */
 page {
@@ -142,15 +142,18 @@ textarea,
 label,
 navigator,
 image {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 .round {
-	border-radius: 5000rpx;
+	-webkit-border-radius: 5000rpx;
+	        border-radius: 5000rpx;
 }
 .radius {
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 }
-/* ==================
+	/* ==================
           图片
  ==================== */
 image {
@@ -190,7 +193,7 @@ image.loading::after {
 .response {
 	width: 100%;
 }
-/* ==================
+	/* ==================
          开关
  ==================== */
 switch,
@@ -265,7 +268,8 @@ checkbox .uni-checkbox-input {
 }
 checkbox.round .wx-checkbox-input,
 checkbox.round .uni-checkbox-input {
-	border-radius: 100rpx;
+	-webkit-border-radius: 100rpx;
+	        border-radius: 100rpx;
 }
 switch[checked]::before {
 	-webkit-transform: scale(0, 0);
@@ -278,7 +282,8 @@ switch .uni-switch-input {
 	width: 48px;
 	height: 26px;
 	margin: 0;
-	border-radius: 100rpx;
+	-webkit-border-radius: 100rpx;
+	        border-radius: 100rpx;
 }
 switch .wx-switch-input:not([class*="bg-"]),
 switch .uni-switch-input:not([class*="bg-"]) {
@@ -289,7 +294,8 @@ switch .uni-switch-input::after {
 	margin: auto;
 	width: 26px;
 	height: 26px;
-	border-radius: 100rpx;
+	-webkit-border-radius: 100rpx;
+	        border-radius: 100rpx;
 	left: 0rpx;
 	top: 0rpx;
 	bottom: 0rpx;
@@ -303,7 +309,8 @@ switch .wx-switch-input.wx-switch-input-checked::after,
 switch .uni-switch-input.uni-switch-input-checked::after {
 	margin: auto;
 	left: 22px;
-	box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
 	-webkit-transform: scale(0.9, 0.9);
 	        transform: scale(0.9, 0.9);
 }
@@ -316,7 +323,8 @@ switch.radius .wx-switch-input::before,
 switch.radius .uni-switch-input::after,
 switch.radius .uni-switch-input,
 switch.radius .uni-switch-input::before {
-	border-radius: 10rpx;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
 }
 switch .wx-switch-input::before,
 radio.radio::before,
@@ -342,7 +350,8 @@ radio.radio .uni-radio-input-checked::after {
 	right: 0;
 	bottom: 0;
 	margin: auto;
-	border-radius: 200rpx;
+	-webkit-border-radius: 200rpx;
+	        border-radius: 200rpx;
 
 
 
@@ -523,10 +532,10 @@ radio.white.checked .uni-radio-input {
 	border-color: #ffffff !important;
 	color: #333333 !important;
 }
-/* ==================
+	/* ==================
           边框
  ==================== */
-/* -- 实线 -- */
+	/* -- 实线 -- */
 .solid,
 .solid-top,
 .solid-right,
@@ -565,13 +574,15 @@ radio.white.checked .uni-radio-input {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: inherit;
+	-webkit-border-radius: inherit;
+	        border-radius: inherit;
 	-webkit-transform: scale(0.5);
 	        transform: scale(0.5);
 	-webkit-transform-origin: 0 0;
 	        transform-origin: 0 0;
 	pointer-events: none;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 .solid::after {
 	border: 1rpx solid rgba(0, 0, 0, 0.1);
@@ -603,7 +614,7 @@ radio.white.checked .uni-radio-input {
 .solids-left::after {
 	border-left: 8rpx solid #eee;
 }
-/* -- 虚线 -- */
+	/* -- 虚线 -- */
 .dashed::after {
 	border: 1rpx dashed #ddd;
 }
@@ -619,7 +630,7 @@ radio.white.checked .uni-radio-input {
 .dashed-left::after {
 	border-left: 1rpx dashed #ddd;
 }
-/* -- 阴影 -- */
+	/* -- 阴影 -- */
 .shadow[class*='white'] {
 	--ShadowSize: 0 1rpx 6rpx;
 }
@@ -628,7 +639,8 @@ radio.white.checked .uni-radio-input {
 }
 .shadow-warp {
 	position: relative;
-	box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+	        box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
 }
 .shadow-warp:before,
 .shadow-warp:after {
@@ -638,7 +650,8 @@ radio.white.checked .uni-radio-input {
 	bottom: 30rpx;
 	left: 20rpx;
 	width: 50%;
-	box-shadow: 0 30rpx 20rpx rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 30rpx 20rpx rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 30rpx 20rpx rgba(0, 0, 0, 0.2);
 	-webkit-transform: rotate(-3deg);
 	        transform: rotate(-3deg);
 	z-index: -1;
@@ -667,11 +680,12 @@ radio.white.checked .uni-radio-input {
 	opacity: 0.4;
 	-webkit-transform-origin: 0 0;
 	        transform-origin: 0 0;
-	border-radius: inherit;
+	-webkit-border-radius: inherit;
+	        border-radius: inherit;
 	-webkit-transform: scale(1, 1);
 	        transform: scale(1, 1);
 }
-/* ==================
+	/* ==================
           按钮
  ==================== */
 .cu-btn {
@@ -686,7 +700,8 @@ radio.white.checked .uni-radio-input {
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
 	        justify-content: center;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	padding: 0 30rpx;
 	font-size: 28rpx;
 	height: 64rpx;
@@ -721,13 +736,16 @@ radio.white.checked .uni-radio-input {
 	        transform: scale(0.5);
 	-webkit-transform-origin: 0 0;
 	        transform-origin: 0 0;
-	box-sizing: border-box;
-	border-radius: 12rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-border-radius: 12rpx;
+	        border-radius: 12rpx;
 	z-index: 1;
 	pointer-events: none;
 }
 .cu-btn.round[class*="line"]::after {
-	border-radius: 1000rpx;
+	-webkit-border-radius: 1000rpx;
+	        border-radius: 1000rpx;
 }
 .cu-btn[class*="lines"]::after {
 	border: 6rpx solid currentColor;
@@ -752,7 +770,8 @@ radio.white.checked .uni-radio-input {
 .cu-btn.cuIcon {
 	width: 64rpx;
 	height: 64rpx;
-	border-radius: 500rpx;
+	-webkit-border-radius: 500rpx;
+	        border-radius: 500rpx;
 	padding: 0;
 }
 button.cuIcon.lg {
@@ -782,7 +801,7 @@ button.cuIcon.lg {
 	opacity: 0.6;
 	color: #ffffff;
 }
-/* ==================
+	/* ==================
           徽章
  ==================== */
 .cu-tag {
@@ -798,7 +817,8 @@ button.cuIcon.lg {
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
 	        justify-content: center;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	padding: 0rpx 16rpx;
 	height: 48rpx;
 	font-family: Helvetica Neue, Helvetica, sans-serif;
@@ -819,19 +839,24 @@ button.cuIcon.lg {
 	        transform: scale(0.5);
 	-webkit-transform-origin: 0 0;
 	        transform-origin: 0 0;
-	box-sizing: border-box;
-	border-radius: inherit;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-border-radius: inherit;
+	        border-radius: inherit;
 	z-index: 1;
 	pointer-events: none;
 }
 .cu-tag.radius[class*="line"]::after {
-	border-radius: 12rpx;
+	-webkit-border-radius: 12rpx;
+	        border-radius: 12rpx;
 }
 .cu-tag.round[class*="line"]::after {
-	border-radius: 1000rpx;
+	-webkit-border-radius: 1000rpx;
+	        border-radius: 1000rpx;
 }
 .cu-tag[class*="line-"]::after {
-	border-radius: 0;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
 }
 .cu-tag+.cu-tag {
 	margin-left: 10rpx;
@@ -860,27 +885,36 @@ button.cuIcon.lg {
 	border-right: 0rpx solid transparent;
 }
 .cu-capsule.radius .cu-tag:first-child {
-	border-top-left-radius: 6rpx;
-	border-bottom-left-radius: 6rpx;
+	-webkit-border-top-left-radius: 6rpx;
+	        border-top-left-radius: 6rpx;
+	-webkit-border-bottom-left-radius: 6rpx;
+	        border-bottom-left-radius: 6rpx;
 }
 .cu-capsule.radius .cu-tag:last-child::after,
 .cu-capsule.radius .cu-tag[class*="line-"] {
-	border-top-right-radius: 12rpx;
-	border-bottom-right-radius: 12rpx;
+	-webkit-border-top-right-radius: 12rpx;
+	        border-top-right-radius: 12rpx;
+	-webkit-border-bottom-right-radius: 12rpx;
+	        border-bottom-right-radius: 12rpx;
 }
 .cu-capsule.round .cu-tag:first-child {
-	border-top-left-radius: 200rpx;
-	border-bottom-left-radius: 200rpx;
+	-webkit-border-top-left-radius: 200rpx;
+	        border-top-left-radius: 200rpx;
+	-webkit-border-bottom-left-radius: 200rpx;
+	        border-bottom-left-radius: 200rpx;
 	text-indent: 4rpx;
 }
 .cu-capsule.round .cu-tag:last-child::after,
 .cu-capsule.round .cu-tag:last-child {
-	border-top-right-radius: 200rpx;
-	border-bottom-right-radius: 200rpx;
+	-webkit-border-top-right-radius: 200rpx;
+	        border-top-right-radius: 200rpx;
+	-webkit-border-bottom-right-radius: 200rpx;
+	        border-bottom-right-radius: 200rpx;
 	text-indent: -4rpx;
 }
 .cu-tag.badge {
-	border-radius: 200rpx;
+	-webkit-border-radius: 200rpx;
+	        border-radius: 200rpx;
 	position: absolute;
 	top: -10rpx;
 	right: -10rpx;
@@ -905,7 +939,7 @@ button.cuIcon.lg {
 	top: -4rpx;
 	right: -4rpx;
 }
-/* ==================
+	/* ==================
           头像
  ==================== */
 .cu-avatar {
@@ -966,7 +1000,7 @@ button.cuIcon.lg {
 	margin-left: -20rpx;
 	border: 1rpx solid #f1f1f1;
 }
-/* ==================
+	/* ==================
          进度条
  ==================== */
 .cu-progress {
@@ -1047,7 +1081,7 @@ to {
 		background-position: 0 0;
 }
 }
-/* ==================
+	/* ==================
           加载
  ==================== */
 .cu-load {
@@ -1099,8 +1133,10 @@ to {
 	width: 260rpx;
 	height: 260rpx;
 	background-color: #ffffff;
-	border-radius: 10rpx;
-	box-shadow: 0 0 0rpx 2000rpx rgba(0, 0, 0, 0.5);
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+	-webkit-box-shadow: 0 0 0rpx 2000rpx rgba(0, 0, 0, 0.5);
+	        box-shadow: 0 0 0rpx 2000rpx rgba(0, 0, 0, 0.5);
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
@@ -1129,7 +1165,8 @@ to {
 	content: "";
 	position: absolute;
 	background-color: #ffffff;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	width: 200rpx;
 	height: 200rpx;
 	font-size: 10px;
@@ -1172,11 +1209,13 @@ to {
 	display: block;
 	width: 24rpx;
 	height: 24rpx;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	border: solid 4rpx transparent;
 	border-top-color: inherit;
 	border-left-color: inherit;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	-webkit-animation: load-progress-spinner 0.4s linear infinite;
 	animation: load-progress-spinner 0.4s linear infinite;
 }
@@ -1200,7 +1239,7 @@ to {
 		transform: rotate(360deg);
 }
 }
-/* ==================
+	/* ==================
           列表
  ==================== */
 .grayscale {
@@ -1341,11 +1380,13 @@ to {
 	position: absolute;
 	top: 0;
 	left: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	width: 200%;
 	height: 200%;
 	border-bottom: 1rpx solid #ddd;
-	border-radius: inherit;
+	-webkit-border-radius: inherit;
+	        border-radius: inherit;
 	content: " ";
 	-webkit-transform: scale(.5);
 	        transform: scale(.5);
@@ -1454,12 +1495,14 @@ to {
 	position: absolute;
 	top: 0;
 	left: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	width: 200%;
 	height: 200%;
 	border-right: 1px solid rgba(0, 0, 0, .1);
 	border-bottom: 1px solid rgba(0, 0, 0, .1);
-	border-radius: inherit;
+	-webkit-border-radius: inherit;
+	        border-radius: inherit;
 	content: " ";
 	-webkit-transform: scale(.5);
 	        transform: scale(.5);
@@ -1509,9 +1552,10 @@ to {
 	overflow: hidden;
 	margin-right: 30rpx;
 	margin-left: 30rpx;
-	border-radius: 20rpx
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx
 }
-/* ==================
+	/* ==================
           操作条
  ==================== */
 .cu-bar {
@@ -1563,7 +1607,8 @@ to {
 	position: absolute;
 	display: inline-block;
 	bottom: -0.2rem;
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 	width: 100%;
 	height: 0.6rem;
 	left: 0.6rem;
@@ -1693,14 +1738,16 @@ to {
 	width: 100%;
 	top: 0;
 	z-index: 1024;
-	box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+	        box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
 }
 .cu-bar.foot {
 	position: fixed;
 	width: 100%;
 	bottom: 0;
 	z-index: 1024;
-	box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
+	        box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
 }
 .cu-bar.tabbar {
 	padding: 0;
@@ -1712,7 +1759,8 @@ to {
 	height: calc(100rpx + env(safe-area-inset-bottom) / 2);
 }
 .cu-bar.tabbar.shadow {
-	box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
+	        box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
 }
 .cu-bar.tabbar .action {
 	font-size: 22rpx;
@@ -1745,7 +1793,8 @@ to {
 	width: 70rpx;
 	z-index: 2;
 	height: 70rpx;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	line-height: 70rpx;
 	font-size: 50rpx;
 	top: -35rpx;
@@ -1763,8 +1812,10 @@ to {
 	left: 0;
 	right: 0;
 	margin: auto;
-	box-shadow: 0 -3rpx 8rpx rgba(0, 0, 0, 0.08);
-	border-radius: 50rpx;
+	-webkit-box-shadow: 0 -3rpx 8rpx rgba(0, 0, 0, 0.08);
+	        box-shadow: 0 -3rpx 8rpx rgba(0, 0, 0, 0.08);
+	-webkit-border-radius: 50rpx;
+	        border-radius: 50rpx;
 	background-color: inherit;
 	z-index: 0;
 }
@@ -1906,13 +1957,15 @@ to {
 
 
 
-	box-shadow: 0rpx 0rpx 0rpx;
+	-webkit-box-shadow: 0rpx 0rpx 0rpx;
+	        box-shadow: 0rpx 0rpx 0rpx;
 	z-index: 9999;
 }
 .cu-custom .cu-bar .border-custom {
 	position: relative;
 	background: rgba(0, 0, 0, 0.15);
-	border-radius: 1000rpx;
+	-webkit-border-radius: 1000rpx;
+	        border-radius: 1000rpx;
 	height: 30px;
 }
 .cu-custom .cu-bar .border-custom::after {
@@ -1922,13 +1975,15 @@ to {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: inherit;
+	-webkit-border-radius: inherit;
+	        border-radius: inherit;
 	-webkit-transform: scale(0.5);
 	        transform: scale(0.5);
 	-webkit-transform-origin: 0 0;
 	        transform-origin: 0 0;
 	pointer-events: none;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	border: 1rpx solid #ffffff;
 	opacity: 0.5;
 }
@@ -1946,7 +2001,8 @@ to {
 	-webkit-transform-origin: 0 0;
 	        transform-origin: 0 0;
 	pointer-events: none;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	opacity: 0.6;
 	background-color: #ffffff;
 }
@@ -1959,7 +2015,7 @@ to {
 	text-align: center;
 	font-size: 34rpx;
 }
-/* ==================
+	/* ==================
          导航栏
  ==================== */
 .nav {
@@ -1978,7 +2034,7 @@ to {
 .nav .cu-item.cur {
 	border-bottom: 4rpx solid;
 }
-/* ==================
+	/* ==================
          时间轴
  ==================== */
 .cu-timeline {
@@ -2041,7 +2097,8 @@ to {
 }
 .cu-timeline>.cu-item>.content {
 	padding: 30rpx;
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 	display: block;
 	line-height: 1.6;
 }
@@ -2052,7 +2109,7 @@ to {
 .cu-timeline>.cu-item>.content+.content {
 	margin-top: 20rpx;
 }
-/* ==================
+	/* ==================
          聊天
  ==================== */
 .cu-chat {
@@ -2090,7 +2147,8 @@ to {
 }
 .cu-chat .cu-item>.main .content {
 	padding: 20rpx;
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 	display: -webkit-inline-box;
 	display: -webkit-inline-flex;
 	display: inline-flex;
@@ -2182,12 +2240,13 @@ to {
 	font-size: 24rpx;
 	padding: 8rpx 12rpx;
 	background-color: rgba(0, 0, 0, 0.2);
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 	color: #ffffff;
 	max-width: 400rpx;
 	line-height: 1.4;
 }
-/* ==================
+	/* ==================
          卡片
  ==================== */
 .cu-card {
@@ -2198,7 +2257,8 @@ to {
 	display: block;
 	background-color: #ffffff;
 	overflow: hidden;
-	border-radius: 10rpx;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
 	margin: 30rpx;
 }
 .cu-card>.cu-item.shadow-blur {
@@ -2206,7 +2266,8 @@ to {
 }
 .cu-card.no-card>.cu-item {
 	margin: 0rpx;
-	border-radius: 0rpx;
+	-webkit-border-radius: 0rpx;
+	        border-radius: 0rpx;
 }
 .cu-card .grid.grid-square {
 	margin-bottom: -20rpx;
@@ -2232,7 +2293,8 @@ to {
 .cu-card.case.no-card .image {
 	margin: 30rpx 30rpx 0;
 	overflow: hidden;
-	border-radius: 10rpx;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
 }
 .cu-card.dynamic {
 	display: block;
@@ -2252,14 +2314,16 @@ to {
 .cu-card.dynamic>.cu-item .square-img {
 	width: 100%;
 	height: 200rpx;
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 }
 .cu-card.dynamic>.cu-item .only-img {
 	width: 100%;
 	height: 320rpx;
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 }
-/* card.dynamic>.cu-item .comment {
+	/* card.dynamic>.cu-item .comment {
   padding: 20upx;
   background-color: #f1f1f1;
   margin: 0 30upx 30upx;
@@ -2288,7 +2352,8 @@ to {
 	width: 240rpx;
 	height: 6.4em;
 	margin-right: 20rpx;
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 }
 .cu-card.article>.cu-item .content .desc {
 	-webkit-box-flex: 1;
@@ -2311,7 +2376,7 @@ to {
 	height: 4.8em;
 	overflow: hidden;
 }
-/* ==================
+	/* ==================
          表单
  ==================== */
 .cu-form-group {
@@ -2350,7 +2415,8 @@ to {
 .cu-form-group>text[class*="cuIcon-"] {
 	font-size: 36rpx;
 	padding: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 .cu-form-group textarea {
 	margin: 32rpx 0 30rpx;
@@ -2404,7 +2470,7 @@ to {
 .cu-form-group textarea[disabled] .placeholder {
 	color: transparent;
 }
-/* ==================
+	/* ==================
          模态窗口
  ==================== */
 .cu-modal {
@@ -2453,7 +2519,8 @@ to {
 	width: 680rpx;
 	max-width: 100%;
 	background-color: #f8f8f8;
-	border-radius: 10rpx;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
 	overflow: hidden;
 }
 .cu-modal.bottom-modal::before {
@@ -2461,7 +2528,8 @@ to {
 }
 .cu-modal.bottom-modal .cu-dialog {
 	width: 100%;
-	border-radius: 0;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
 }
 .cu-modal.bottom-modal {
 	margin-bottom: -1000rpx;
@@ -2479,7 +2547,8 @@ to {
 .cu-modal.drawer-modal .cu-dialog {
 	height: 100%;
 	min-width: 200rpx;
-	border-radius: 0;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
 	margin: initial;
 	-webkit-transition-duration: 0.3s;
 	        transition-duration: 0.3s;
@@ -2501,7 +2570,7 @@ to {
   margin-right: 0;
   min-height: 100rpx;
 }
-/* ==================
+	/* ==================
          轮播
  ==================== */
 swiper .a-swiper-dot {
@@ -2509,7 +2578,8 @@ swiper .a-swiper-dot {
 	width: 16rpx;
 	height: 16rpx;
 	background: rgba(0, 0, 0, .3);
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	vertical-align: middle;
 }
 swiper[class*="-dot"] .wx-swiper-dots,
@@ -2533,7 +2603,8 @@ swiper.square-dot .uni-swiper-dot {
 	opacity: 0.4;
 	width: 10rpx;
 	height: 10rpx;
-	border-radius: 20rpx;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
 	margin: 0 8rpx !important;
 }
 swiper.square-dot .wx-swiper-dot.wx-swiper-dot-active,
@@ -2563,7 +2634,8 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active::after {
 	bottom: 0;
 	margin: auto;
 	background-color: #ffffff;
-	border-radius: 20rpx;
+	-webkit-border-radius: 20rpx;
+	        border-radius: 20rpx;
 }
 swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active,
 swiper.round-dot .a-swiper-dot.a-swiper-dot-active,
@@ -2590,7 +2662,8 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 .card-swiper swiper-item {
 	width: 610rpx !important;
 	left: 70rpx;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	padding: 40rpx 0rpx 70rpx;
 	overflow: initial;
 }
@@ -2598,7 +2671,8 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 	width: 100%;
 	display: block;
 	height: 100%;
-	border-radius: 10rpx;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
 	-webkit-transform: scale(0.9);
 	        transform: scale(0.9);
 	-webkit-transition: all 0.2s ease-in 0s;
@@ -2635,10 +2709,11 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 .tower-swiper .tower-item .swiper-item {
 	width: 100%;
 	height: 100%;
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 	overflow: hidden;
 }
-/* ==================
+	/* ==================
           步骤条
  ==================== */
 .cu-steps {
@@ -2718,7 +2793,8 @@ scroll-view.cu-steps .cu-item {
 .cu-steps .cu-item .num {
 	width: 40rpx;
 	height: 40rpx;
-	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
 	line-height: 40rpx;
 	margin: 20rpx auto;
 	font-size: 24rpx;
@@ -2765,10 +2841,10 @@ scroll-view.cu-steps .cu-item {
 .cu-steps .cu-item[class*="text-"] .num.err::after {
 	content: "\e646";
 }
-/* ==================
+	/* ==================
           布局
  ==================== */
-/*  -- flex弹性布局 -- */
+	/*  -- flex弹性布局 -- */
 .flex {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -2884,7 +2960,7 @@ scroll-view.cu-steps .cu-item {
 	-webkit-justify-content: space-around;
 	        justify-content: space-around;
 }
-/* grid布局 */
+	/* grid布局 */
 .grid {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -2899,7 +2975,8 @@ scroll-view.cu-steps .cu-item {
 	position: absolute;
 	right: 0;
 	top: 0;
-	border-bottom-left-radius: 6rpx;
+	-webkit-border-bottom-left-radius: 6rpx;
+	        border-bottom-left-radius: 6rpx;
 	padding: 6rpx 12rpx;
 	height: auto;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -2930,7 +3007,8 @@ scroll-view.cu-steps .cu-item {
 .grid.grid-square>view {
 	margin-right: 20rpx;
 	margin-bottom: 20rpx;
-	border-radius: 6rpx;
+	-webkit-border-radius: 6rpx;
+	        border-radius: 6rpx;
 	position: relative;
 	overflow: hidden;
 }
@@ -2985,7 +3063,7 @@ scroll-view.cu-steps .cu-item {
 .grid.col-5>view {
 	width: 20%;
 }
-/*  -- 内外边距 -- */
+	/*  -- 内外边距 -- */
 .margin-0 {
 	margin: 0;
 }
@@ -3222,7 +3300,7 @@ scroll-view.cu-steps .cu-item {
 	padding-top: 50rpx;
 	padding-bottom: 50rpx;
 }
-/* -- 浮动 --  */
+	/* -- 浮动 --  */
 .cf::after,
 .cf::before {
 	content: " ";
@@ -3237,7 +3315,7 @@ scroll-view.cu-steps .cu-item {
 .fr {
 	float: right;
 }
-/* ==================
+	/* ==================
           背景
  ==================== */
 .line-red::after,
@@ -3361,11 +3439,13 @@ scroll-view.cu-steps .cu-item {
 	color: #666666;
 }
 .bg-shadeTop {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0.01)));
 	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.01));
 	background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.01));
 	color: #ffffff;
 }
 .bg-shadeBottom {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 1)));
 	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 1));
 	background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 1));
 	color: #ffffff;
@@ -3449,49 +3529,64 @@ scroll-view.cu-steps .cu-item {
 	color: #ffffff;
 }
 .shadow[class*="-red"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(204, 69, 59, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(204, 69, 59, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(204, 69, 59, 0.2);
 }
 .shadow[class*="-orange"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(217, 109, 26, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(217, 109, 26, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(217, 109, 26, 0.2);
 }
 .shadow[class*="-yellow"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(224, 170, 7, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(224, 170, 7, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(224, 170, 7, 0.2);
 }
 .shadow[class*="-olive"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(124, 173, 55, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(124, 173, 55, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(124, 173, 55, 0.2);
 }
 .shadow[class*="-green"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(48, 156, 63, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(48, 156, 63, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(48, 156, 63, 0.2);
 }
 .shadow[class*="-cyan"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(28, 187, 180, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(28, 187, 180, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(28, 187, 180, 0.2);
 }
 .shadow[class*="-blue"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(0, 102, 204, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(0, 102, 204, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(0, 102, 204, 0.2);
 }
 .shadow[class*="-purple"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(88, 48, 156, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(88, 48, 156, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(88, 48, 156, 0.2);
 }
 .shadow[class*="-mauve"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(133, 33, 150, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(133, 33, 150, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(133, 33, 150, 0.2);
 }
 .shadow[class*="-pink"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(199, 50, 134, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(199, 50, 134, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(199, 50, 134, 0.2);
 }
 .shadow[class*="-brown"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(140, 88, 53, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(140, 88, 53, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(140, 88, 53, 0.2);
 }
 .shadow[class*="-grey"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(114, 130, 138, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(114, 130, 138, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(114, 130, 138, 0.2);
 }
 .shadow[class*="-gray"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(114, 130, 138, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(114, 130, 138, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(114, 130, 138, 0.2);
 }
 .shadow[class*="-black"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(26, 26, 26, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(26, 26, 26, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(26, 26, 26, 0.2);
 }
 .shadow[class*="-white"] {
-	box-shadow: 6rpx 6rpx 8rpx rgba(26, 26, 26, 0.2);
+	-webkit-box-shadow: 6rpx 6rpx 8rpx rgba(26, 26, 26, 0.2);
+	        box-shadow: 6rpx 6rpx 8rpx rgba(26, 26, 26, 0.2);
 }
 .text-shadow[class*="-red"] {
 	text-shadow: 6rpx 6rpx 8rpx rgba(204, 69, 59, 0.2);
@@ -3546,7 +3641,8 @@ scroll-view.cu-steps .cu-item {
 }
 .bg-mask::after {
 	content: "";
-	border-radius: inherit;
+	-webkit-border-radius: inherit;
+	        border-radius: inherit;
 	width: 100%;
 	height: 100%;
 	display: block;
@@ -3575,7 +3671,7 @@ scroll-view.cu-steps .cu-item {
 	z-index: 0;
 	pointer-events: none;
 }
-/* ==================
+	/* ==================
           文本
  ==================== */
 .text-xs {
@@ -4698,7 +4794,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 1
 }
 .br-1s {
-	border-radius: 1%
+	-webkit-border-radius: 1%;
+	        border-radius: 1%
 }
 .top-1s {
 	top: 1%
@@ -4746,7 +4843,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 1px
 }
 .br-1 {
-	border-radius: 1px
+	-webkit-border-radius: 1px;
+	        border-radius: 1px
 }
 .w-1 {
 	width: 1px
@@ -4793,7 +4891,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 2
 }
 .br-2s {
-	border-radius: 2%
+	-webkit-border-radius: 2%;
+	        border-radius: 2%
 }
 .top-2s {
 	top: 2%
@@ -4841,7 +4940,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 2px
 }
 .br-2 {
-	border-radius: 2px
+	-webkit-border-radius: 2px;
+	        border-radius: 2px
 }
 .w-2 {
 	width: 2px
@@ -4888,7 +4988,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 3
 }
 .br-3s {
-	border-radius: 3%
+	-webkit-border-radius: 3%;
+	        border-radius: 3%
 }
 .top-3s {
 	top: 3%
@@ -4936,7 +5037,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 3px
 }
 .br-3 {
-	border-radius: 3px
+	-webkit-border-radius: 3px;
+	        border-radius: 3px
 }
 .w-3 {
 	width: 3px
@@ -4983,7 +5085,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 4
 }
 .br-4s {
-	border-radius: 4%
+	-webkit-border-radius: 4%;
+	        border-radius: 4%
 }
 .top-4s {
 	top: 4%
@@ -5031,7 +5134,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 4px
 }
 .br-4 {
-	border-radius: 4px
+	-webkit-border-radius: 4px;
+	        border-radius: 4px
 }
 .w-4 {
 	width: 4px
@@ -5078,7 +5182,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 5
 }
 .br-5s {
-	border-radius: 5%
+	-webkit-border-radius: 5%;
+	        border-radius: 5%
 }
 .top-5s {
 	top: 5%
@@ -5126,7 +5231,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 5px
 }
 .br-5 {
-	border-radius: 5px
+	-webkit-border-radius: 5px;
+	        border-radius: 5px
 }
 .w-5 {
 	width: 5px
@@ -5173,7 +5279,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 6
 }
 .br-6s {
-	border-radius: 6%
+	-webkit-border-radius: 6%;
+	        border-radius: 6%
 }
 .top-6s {
 	top: 6%
@@ -5221,7 +5328,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 6px
 }
 .br-6 {
-	border-radius: 6px
+	-webkit-border-radius: 6px;
+	        border-radius: 6px
 }
 .w-6 {
 	width: 6px
@@ -5268,7 +5376,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 7
 }
 .br-7s {
-	border-radius: 7%
+	-webkit-border-radius: 7%;
+	        border-radius: 7%
 }
 .top-7s {
 	top: 7%
@@ -5316,7 +5425,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 7px
 }
 .br-7 {
-	border-radius: 7px
+	-webkit-border-radius: 7px;
+	        border-radius: 7px
 }
 .w-7 {
 	width: 7px
@@ -5363,7 +5473,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 8
 }
 .br-8s {
-	border-radius: 8%
+	-webkit-border-radius: 8%;
+	        border-radius: 8%
 }
 .top-8s {
 	top: 8%
@@ -5411,7 +5522,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 8px
 }
 .br-8 {
-	border-radius: 8px
+	-webkit-border-radius: 8px;
+	        border-radius: 8px
 }
 .w-8 {
 	width: 8px
@@ -5458,7 +5570,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 9
 }
 .br-9s {
-	border-radius: 9%
+	-webkit-border-radius: 9%;
+	        border-radius: 9%
 }
 .top-9s {
 	top: 9%
@@ -5506,7 +5619,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 9px
 }
 .br-9 {
-	border-radius: 9px
+	-webkit-border-radius: 9px;
+	        border-radius: 9px
 }
 .w-9 {
 	width: 9px
@@ -5553,7 +5667,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 10
 }
 .br-10s {
-	border-radius: 10%
+	-webkit-border-radius: 10%;
+	        border-radius: 10%
 }
 .top-10s {
 	top: 10%
@@ -5601,7 +5716,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 10px
 }
 .br-10 {
-	border-radius: 10px
+	-webkit-border-radius: 10px;
+	        border-radius: 10px
 }
 .w-10 {
 	width: 10px
@@ -5648,7 +5764,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 11
 }
 .br-11s {
-	border-radius: 11%
+	-webkit-border-radius: 11%;
+	        border-radius: 11%
 }
 .top-11s {
 	top: 11%
@@ -5696,7 +5813,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 11px
 }
 .br-11 {
-	border-radius: 11px
+	-webkit-border-radius: 11px;
+	        border-radius: 11px
 }
 .w-11 {
 	width: 11px
@@ -5743,7 +5861,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 12
 }
 .br-12s {
-	border-radius: 12%
+	-webkit-border-radius: 12%;
+	        border-radius: 12%
 }
 .top-12s {
 	top: 12%
@@ -5791,7 +5910,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 12px
 }
 .br-12 {
-	border-radius: 12px
+	-webkit-border-radius: 12px;
+	        border-radius: 12px
 }
 .w-12 {
 	width: 12px
@@ -5838,7 +5958,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 13
 }
 .br-13s {
-	border-radius: 13%
+	-webkit-border-radius: 13%;
+	        border-radius: 13%
 }
 .top-13s {
 	top: 13%
@@ -5886,7 +6007,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 13px
 }
 .br-13 {
-	border-radius: 13px
+	-webkit-border-radius: 13px;
+	        border-radius: 13px
 }
 .w-13 {
 	width: 13px
@@ -5933,7 +6055,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 14
 }
 .br-14s {
-	border-radius: 14%
+	-webkit-border-radius: 14%;
+	        border-radius: 14%
 }
 .top-14s {
 	top: 14%
@@ -5981,7 +6104,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 14px
 }
 .br-14 {
-	border-radius: 14px
+	-webkit-border-radius: 14px;
+	        border-radius: 14px
 }
 .w-14 {
 	width: 14px
@@ -6028,7 +6152,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 15
 }
 .br-15s {
-	border-radius: 15%
+	-webkit-border-radius: 15%;
+	        border-radius: 15%
 }
 .top-15s {
 	top: 15%
@@ -6076,7 +6201,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 15px
 }
 .br-15 {
-	border-radius: 15px
+	-webkit-border-radius: 15px;
+	        border-radius: 15px
 }
 .w-15 {
 	width: 15px
@@ -6123,7 +6249,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 16
 }
 .br-16s {
-	border-radius: 16%
+	-webkit-border-radius: 16%;
+	        border-radius: 16%
 }
 .top-16s {
 	top: 16%
@@ -6171,7 +6298,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 16px
 }
 .br-16 {
-	border-radius: 16px
+	-webkit-border-radius: 16px;
+	        border-radius: 16px
 }
 .w-16 {
 	width: 16px
@@ -6218,7 +6346,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 17
 }
 .br-17s {
-	border-radius: 17%
+	-webkit-border-radius: 17%;
+	        border-radius: 17%
 }
 .top-17s {
 	top: 17%
@@ -6266,7 +6395,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 17px
 }
 .br-17 {
-	border-radius: 17px
+	-webkit-border-radius: 17px;
+	        border-radius: 17px
 }
 .w-17 {
 	width: 17px
@@ -6313,7 +6443,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 18
 }
 .br-18s {
-	border-radius: 18%
+	-webkit-border-radius: 18%;
+	        border-radius: 18%
 }
 .top-18s {
 	top: 18%
@@ -6361,7 +6492,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 18px
 }
 .br-18 {
-	border-radius: 18px
+	-webkit-border-radius: 18px;
+	        border-radius: 18px
 }
 .w-18 {
 	width: 18px
@@ -6408,7 +6540,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 19
 }
 .br-19s {
-	border-radius: 19%
+	-webkit-border-radius: 19%;
+	        border-radius: 19%
 }
 .top-19s {
 	top: 19%
@@ -6456,7 +6589,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 19px
 }
 .br-19 {
-	border-radius: 19px
+	-webkit-border-radius: 19px;
+	        border-radius: 19px
 }
 .w-19 {
 	width: 19px
@@ -6503,7 +6637,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 20
 }
 .br-20s {
-	border-radius: 20%
+	-webkit-border-radius: 20%;
+	        border-radius: 20%
 }
 .top-20s {
 	top: 20%
@@ -6551,7 +6686,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 20px
 }
 .br-20 {
-	border-radius: 20px
+	-webkit-border-radius: 20px;
+	        border-radius: 20px
 }
 .w-20 {
 	width: 20px
@@ -6598,7 +6734,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 21
 }
 .br-21s {
-	border-radius: 21%
+	-webkit-border-radius: 21%;
+	        border-radius: 21%
 }
 .top-21s {
 	top: 21%
@@ -6646,7 +6783,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 21px
 }
 .br-21 {
-	border-radius: 21px
+	-webkit-border-radius: 21px;
+	        border-radius: 21px
 }
 .w-21 {
 	width: 21px
@@ -6693,7 +6831,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 22
 }
 .br-22s {
-	border-radius: 22%
+	-webkit-border-radius: 22%;
+	        border-radius: 22%
 }
 .top-22s {
 	top: 22%
@@ -6741,7 +6880,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 22px
 }
 .br-22 {
-	border-radius: 22px
+	-webkit-border-radius: 22px;
+	        border-radius: 22px
 }
 .w-22 {
 	width: 22px
@@ -6788,7 +6928,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 23
 }
 .br-23s {
-	border-radius: 23%
+	-webkit-border-radius: 23%;
+	        border-radius: 23%
 }
 .top-23s {
 	top: 23%
@@ -6836,7 +6977,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 23px
 }
 .br-23 {
-	border-radius: 23px
+	-webkit-border-radius: 23px;
+	        border-radius: 23px
 }
 .w-23 {
 	width: 23px
@@ -6883,7 +7025,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 24
 }
 .br-24s {
-	border-radius: 24%
+	-webkit-border-radius: 24%;
+	        border-radius: 24%
 }
 .top-24s {
 	top: 24%
@@ -6931,7 +7074,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 24px
 }
 .br-24 {
-	border-radius: 24px
+	-webkit-border-radius: 24px;
+	        border-radius: 24px
 }
 .w-24 {
 	width: 24px
@@ -6978,7 +7122,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 25
 }
 .br-25s {
-	border-radius: 25%
+	-webkit-border-radius: 25%;
+	        border-radius: 25%
 }
 .top-25s {
 	top: 25%
@@ -7026,7 +7171,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 25px
 }
 .br-25 {
-	border-radius: 25px
+	-webkit-border-radius: 25px;
+	        border-radius: 25px
 }
 .w-25 {
 	width: 25px
@@ -7073,7 +7219,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 26
 }
 .br-26s {
-	border-radius: 26%
+	-webkit-border-radius: 26%;
+	        border-radius: 26%
 }
 .top-26s {
 	top: 26%
@@ -7121,7 +7268,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 26px
 }
 .br-26 {
-	border-radius: 26px
+	-webkit-border-radius: 26px;
+	        border-radius: 26px
 }
 .w-26 {
 	width: 26px
@@ -7168,7 +7316,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 27
 }
 .br-27s {
-	border-radius: 27%
+	-webkit-border-radius: 27%;
+	        border-radius: 27%
 }
 .top-27s {
 	top: 27%
@@ -7216,7 +7365,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 27px
 }
 .br-27 {
-	border-radius: 27px
+	-webkit-border-radius: 27px;
+	        border-radius: 27px
 }
 .w-27 {
 	width: 27px
@@ -7263,7 +7413,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 28
 }
 .br-28s {
-	border-radius: 28%
+	-webkit-border-radius: 28%;
+	        border-radius: 28%
 }
 .top-28s {
 	top: 28%
@@ -7311,7 +7462,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 28px
 }
 .br-28 {
-	border-radius: 28px
+	-webkit-border-radius: 28px;
+	        border-radius: 28px
 }
 .w-28 {
 	width: 28px
@@ -7358,7 +7510,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 29
 }
 .br-29s {
-	border-radius: 29%
+	-webkit-border-radius: 29%;
+	        border-radius: 29%
 }
 .top-29s {
 	top: 29%
@@ -7406,7 +7559,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 29px
 }
 .br-29 {
-	border-radius: 29px
+	-webkit-border-radius: 29px;
+	        border-radius: 29px
 }
 .w-29 {
 	width: 29px
@@ -7453,7 +7607,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 30
 }
 .br-30s {
-	border-radius: 30%
+	-webkit-border-radius: 30%;
+	        border-radius: 30%
 }
 .top-30s {
 	top: 30%
@@ -7501,7 +7656,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 30px
 }
 .br-30 {
-	border-radius: 30px
+	-webkit-border-radius: 30px;
+	        border-radius: 30px
 }
 .w-30 {
 	width: 30px
@@ -7548,7 +7704,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 31
 }
 .br-31s {
-	border-radius: 31%
+	-webkit-border-radius: 31%;
+	        border-radius: 31%
 }
 .top-31s {
 	top: 31%
@@ -7596,7 +7753,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 31px
 }
 .br-31 {
-	border-radius: 31px
+	-webkit-border-radius: 31px;
+	        border-radius: 31px
 }
 .w-31 {
 	width: 31px
@@ -7643,7 +7801,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 32
 }
 .br-32s {
-	border-radius: 32%
+	-webkit-border-radius: 32%;
+	        border-radius: 32%
 }
 .top-32s {
 	top: 32%
@@ -7691,7 +7850,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 32px
 }
 .br-32 {
-	border-radius: 32px
+	-webkit-border-radius: 32px;
+	        border-radius: 32px
 }
 .w-32 {
 	width: 32px
@@ -7738,7 +7898,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 33
 }
 .br-33s {
-	border-radius: 33%
+	-webkit-border-radius: 33%;
+	        border-radius: 33%
 }
 .top-33s {
 	top: 33%
@@ -7786,7 +7947,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 33px
 }
 .br-33 {
-	border-radius: 33px
+	-webkit-border-radius: 33px;
+	        border-radius: 33px
 }
 .w-33 {
 	width: 33px
@@ -7833,7 +7995,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 34
 }
 .br-34s {
-	border-radius: 34%
+	-webkit-border-radius: 34%;
+	        border-radius: 34%
 }
 .top-34s {
 	top: 34%
@@ -7881,7 +8044,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 34px
 }
 .br-34 {
-	border-radius: 34px
+	-webkit-border-radius: 34px;
+	        border-radius: 34px
 }
 .w-34 {
 	width: 34px
@@ -7928,7 +8092,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 35
 }
 .br-35s {
-	border-radius: 35%
+	-webkit-border-radius: 35%;
+	        border-radius: 35%
 }
 .top-35s {
 	top: 35%
@@ -7976,7 +8141,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 35px
 }
 .br-35 {
-	border-radius: 35px
+	-webkit-border-radius: 35px;
+	        border-radius: 35px
 }
 .w-35 {
 	width: 35px
@@ -8023,7 +8189,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 36
 }
 .br-36s {
-	border-radius: 36%
+	-webkit-border-radius: 36%;
+	        border-radius: 36%
 }
 .top-36s {
 	top: 36%
@@ -8071,7 +8238,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 36px
 }
 .br-36 {
-	border-radius: 36px
+	-webkit-border-radius: 36px;
+	        border-radius: 36px
 }
 .w-36 {
 	width: 36px
@@ -8118,7 +8286,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 37
 }
 .br-37s {
-	border-radius: 37%
+	-webkit-border-radius: 37%;
+	        border-radius: 37%
 }
 .top-37s {
 	top: 37%
@@ -8166,7 +8335,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 37px
 }
 .br-37 {
-	border-radius: 37px
+	-webkit-border-radius: 37px;
+	        border-radius: 37px
 }
 .w-37 {
 	width: 37px
@@ -8213,7 +8383,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 38
 }
 .br-38s {
-	border-radius: 38%
+	-webkit-border-radius: 38%;
+	        border-radius: 38%
 }
 .top-38s {
 	top: 38%
@@ -8261,7 +8432,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 38px
 }
 .br-38 {
-	border-radius: 38px
+	-webkit-border-radius: 38px;
+	        border-radius: 38px
 }
 .w-38 {
 	width: 38px
@@ -8308,7 +8480,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 39
 }
 .br-39s {
-	border-radius: 39%
+	-webkit-border-radius: 39%;
+	        border-radius: 39%
 }
 .top-39s {
 	top: 39%
@@ -8356,7 +8529,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 39px
 }
 .br-39 {
-	border-radius: 39px
+	-webkit-border-radius: 39px;
+	        border-radius: 39px
 }
 .w-39 {
 	width: 39px
@@ -8403,7 +8577,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 40
 }
 .br-40s {
-	border-radius: 40%
+	-webkit-border-radius: 40%;
+	        border-radius: 40%
 }
 .top-40s {
 	top: 40%
@@ -8451,7 +8626,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 40px
 }
 .br-40 {
-	border-radius: 40px
+	-webkit-border-radius: 40px;
+	        border-radius: 40px
 }
 .w-40 {
 	width: 40px
@@ -8498,7 +8674,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 41
 }
 .br-41s {
-	border-radius: 41%
+	-webkit-border-radius: 41%;
+	        border-radius: 41%
 }
 .top-41s {
 	top: 41%
@@ -8546,7 +8723,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 41px
 }
 .br-41 {
-	border-radius: 41px
+	-webkit-border-radius: 41px;
+	        border-radius: 41px
 }
 .w-41 {
 	width: 41px
@@ -8593,7 +8771,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 42
 }
 .br-42s {
-	border-radius: 42%
+	-webkit-border-radius: 42%;
+	        border-radius: 42%
 }
 .top-42s {
 	top: 42%
@@ -8641,7 +8820,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 42px
 }
 .br-42 {
-	border-radius: 42px
+	-webkit-border-radius: 42px;
+	        border-radius: 42px
 }
 .w-42 {
 	width: 42px
@@ -8688,7 +8868,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 43
 }
 .br-43s {
-	border-radius: 43%
+	-webkit-border-radius: 43%;
+	        border-radius: 43%
 }
 .top-43s {
 	top: 43%
@@ -8736,7 +8917,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 43px
 }
 .br-43 {
-	border-radius: 43px
+	-webkit-border-radius: 43px;
+	        border-radius: 43px
 }
 .w-43 {
 	width: 43px
@@ -8783,7 +8965,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 44
 }
 .br-44s {
-	border-radius: 44%
+	-webkit-border-radius: 44%;
+	        border-radius: 44%
 }
 .top-44s {
 	top: 44%
@@ -8831,7 +9014,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 44px
 }
 .br-44 {
-	border-radius: 44px
+	-webkit-border-radius: 44px;
+	        border-radius: 44px
 }
 .w-44 {
 	width: 44px
@@ -8878,7 +9062,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 45
 }
 .br-45s {
-	border-radius: 45%
+	-webkit-border-radius: 45%;
+	        border-radius: 45%
 }
 .top-45s {
 	top: 45%
@@ -8926,7 +9111,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 45px
 }
 .br-45 {
-	border-radius: 45px
+	-webkit-border-radius: 45px;
+	        border-radius: 45px
 }
 .w-45 {
 	width: 45px
@@ -8973,7 +9159,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 46
 }
 .br-46s {
-	border-radius: 46%
+	-webkit-border-radius: 46%;
+	        border-radius: 46%
 }
 .top-46s {
 	top: 46%
@@ -9021,7 +9208,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 46px
 }
 .br-46 {
-	border-radius: 46px
+	-webkit-border-radius: 46px;
+	        border-radius: 46px
 }
 .w-46 {
 	width: 46px
@@ -9068,7 +9256,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 47
 }
 .br-47s {
-	border-radius: 47%
+	-webkit-border-radius: 47%;
+	        border-radius: 47%
 }
 .top-47s {
 	top: 47%
@@ -9116,7 +9305,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 47px
 }
 .br-47 {
-	border-radius: 47px
+	-webkit-border-radius: 47px;
+	        border-radius: 47px
 }
 .w-47 {
 	width: 47px
@@ -9163,7 +9353,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 48
 }
 .br-48s {
-	border-radius: 48%
+	-webkit-border-radius: 48%;
+	        border-radius: 48%
 }
 .top-48s {
 	top: 48%
@@ -9211,7 +9402,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 48px
 }
 .br-48 {
-	border-radius: 48px
+	-webkit-border-radius: 48px;
+	        border-radius: 48px
 }
 .w-48 {
 	width: 48px
@@ -9258,7 +9450,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 49
 }
 .br-49s {
-	border-radius: 49%
+	-webkit-border-radius: 49%;
+	        border-radius: 49%
 }
 .top-49s {
 	top: 49%
@@ -9306,7 +9499,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 49px
 }
 .br-49 {
-	border-radius: 49px
+	-webkit-border-radius: 49px;
+	        border-radius: 49px
 }
 .w-49 {
 	width: 49px
@@ -9353,7 +9547,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 50
 }
 .br-50s {
-	border-radius: 50%
+	-webkit-border-radius: 50%;
+	        border-radius: 50%
 }
 .top-50s {
 	top: 50%
@@ -9401,7 +9596,8 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 50px
 }
 .br-50 {
-	border-radius: 50px
+	-webkit-border-radius: 50px;
+	        border-radius: 50px
 }
 .w-50 {
 	width: 50px
@@ -9448,7 +9644,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 51
 }
 .br-51s {
-	border-radius: 51%
+	-webkit-border-radius: 51%;
+	        border-radius: 51%
 }
 .top-51s {
 	top: 51%
@@ -9540,7 +9737,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 52
 }
 .br-52s {
-	border-radius: 52%
+	-webkit-border-radius: 52%;
+	        border-radius: 52%
 }
 .top-52s {
 	top: 52%
@@ -9632,7 +9830,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 53
 }
 .br-53s {
-	border-radius: 53%
+	-webkit-border-radius: 53%;
+	        border-radius: 53%
 }
 .top-53s {
 	top: 53%
@@ -9724,7 +9923,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 54
 }
 .br-54s {
-	border-radius: 54%
+	-webkit-border-radius: 54%;
+	        border-radius: 54%
 }
 .top-54s {
 	top: 54%
@@ -9816,7 +10016,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 55
 }
 .br-55s {
-	border-radius: 55%
+	-webkit-border-radius: 55%;
+	        border-radius: 55%
 }
 .top-55s {
 	top: 55%
@@ -9908,7 +10109,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 56
 }
 .br-56s {
-	border-radius: 56%
+	-webkit-border-radius: 56%;
+	        border-radius: 56%
 }
 .top-56s {
 	top: 56%
@@ -10000,7 +10202,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 57
 }
 .br-57s {
-	border-radius: 57%
+	-webkit-border-radius: 57%;
+	        border-radius: 57%
 }
 .top-57s {
 	top: 57%
@@ -10092,7 +10295,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 58
 }
 .br-58s {
-	border-radius: 58%
+	-webkit-border-radius: 58%;
+	        border-radius: 58%
 }
 .top-58s {
 	top: 58%
@@ -10184,7 +10388,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 59
 }
 .br-59s {
-	border-radius: 59%
+	-webkit-border-radius: 59%;
+	        border-radius: 59%
 }
 .top-59s {
 	top: 59%
@@ -10276,7 +10481,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 60
 }
 .br-60s {
-	border-radius: 60%
+	-webkit-border-radius: 60%;
+	        border-radius: 60%
 }
 .top-60s {
 	top: 60%
@@ -10368,7 +10574,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 61
 }
 .br-61s {
-	border-radius: 61%
+	-webkit-border-radius: 61%;
+	        border-radius: 61%
 }
 .top-61s {
 	top: 61%
@@ -10460,7 +10667,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 62
 }
 .br-62s {
-	border-radius: 62%
+	-webkit-border-radius: 62%;
+	        border-radius: 62%
 }
 .top-62s {
 	top: 62%
@@ -10552,7 +10760,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 63
 }
 .br-63s {
-	border-radius: 63%
+	-webkit-border-radius: 63%;
+	        border-radius: 63%
 }
 .top-63s {
 	top: 63%
@@ -10644,7 +10853,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 64
 }
 .br-64s {
-	border-radius: 64%
+	-webkit-border-radius: 64%;
+	        border-radius: 64%
 }
 .top-64s {
 	top: 64%
@@ -10736,7 +10946,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 65
 }
 .br-65s {
-	border-radius: 65%
+	-webkit-border-radius: 65%;
+	        border-radius: 65%
 }
 .top-65s {
 	top: 65%
@@ -10828,7 +11039,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 66
 }
 .br-66s {
-	border-radius: 66%
+	-webkit-border-radius: 66%;
+	        border-radius: 66%
 }
 .top-66s {
 	top: 66%
@@ -10920,7 +11132,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 67
 }
 .br-67s {
-	border-radius: 67%
+	-webkit-border-radius: 67%;
+	        border-radius: 67%
 }
 .top-67s {
 	top: 67%
@@ -11012,7 +11225,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 68
 }
 .br-68s {
-	border-radius: 68%
+	-webkit-border-radius: 68%;
+	        border-radius: 68%
 }
 .top-68s {
 	top: 68%
@@ -11104,7 +11318,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 69
 }
 .br-69s {
-	border-radius: 69%
+	-webkit-border-radius: 69%;
+	        border-radius: 69%
 }
 .top-69s {
 	top: 69%
@@ -11196,7 +11411,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 70
 }
 .br-70s {
-	border-radius: 70%
+	-webkit-border-radius: 70%;
+	        border-radius: 70%
 }
 .top-70s {
 	top: 70%
@@ -11288,7 +11504,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 71
 }
 .br-71s {
-	border-radius: 71%
+	-webkit-border-radius: 71%;
+	        border-radius: 71%
 }
 .top-71s {
 	top: 71%
@@ -11380,7 +11597,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 72
 }
 .br-72s {
-	border-radius: 72%
+	-webkit-border-radius: 72%;
+	        border-radius: 72%
 }
 .top-72s {
 	top: 72%
@@ -11472,7 +11690,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 73
 }
 .br-73s {
-	border-radius: 73%
+	-webkit-border-radius: 73%;
+	        border-radius: 73%
 }
 .top-73s {
 	top: 73%
@@ -11564,7 +11783,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 74
 }
 .br-74s {
-	border-radius: 74%
+	-webkit-border-radius: 74%;
+	        border-radius: 74%
 }
 .top-74s {
 	top: 74%
@@ -11656,7 +11876,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 75
 }
 .br-75s {
-	border-radius: 75%
+	-webkit-border-radius: 75%;
+	        border-radius: 75%
 }
 .top-75s {
 	top: 75%
@@ -11748,7 +11969,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 76
 }
 .br-76s {
-	border-radius: 76%
+	-webkit-border-radius: 76%;
+	        border-radius: 76%
 }
 .top-76s {
 	top: 76%
@@ -11840,7 +12062,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 77
 }
 .br-77s {
-	border-radius: 77%
+	-webkit-border-radius: 77%;
+	        border-radius: 77%
 }
 .top-77s {
 	top: 77%
@@ -11932,7 +12155,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 78
 }
 .br-78s {
-	border-radius: 78%
+	-webkit-border-radius: 78%;
+	        border-radius: 78%
 }
 .top-78s {
 	top: 78%
@@ -12024,7 +12248,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 79
 }
 .br-79s {
-	border-radius: 79%
+	-webkit-border-radius: 79%;
+	        border-radius: 79%
 }
 .top-79s {
 	top: 79%
@@ -12116,7 +12341,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 80
 }
 .br-80s {
-	border-radius: 80%
+	-webkit-border-radius: 80%;
+	        border-radius: 80%
 }
 .top-80s {
 	top: 80%
@@ -12208,7 +12434,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 81
 }
 .br-81s {
-	border-radius: 81%
+	-webkit-border-radius: 81%;
+	        border-radius: 81%
 }
 .top-81s {
 	top: 81%
@@ -12300,7 +12527,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 82
 }
 .br-82s {
-	border-radius: 82%
+	-webkit-border-radius: 82%;
+	        border-radius: 82%
 }
 .top-82s {
 	top: 82%
@@ -12392,7 +12620,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 83
 }
 .br-83s {
-	border-radius: 83%
+	-webkit-border-radius: 83%;
+	        border-radius: 83%
 }
 .top-83s {
 	top: 83%
@@ -12484,7 +12713,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 84
 }
 .br-84s {
-	border-radius: 84%
+	-webkit-border-radius: 84%;
+	        border-radius: 84%
 }
 .top-84s {
 	top: 84%
@@ -12576,7 +12806,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 85
 }
 .br-85s {
-	border-radius: 85%
+	-webkit-border-radius: 85%;
+	        border-radius: 85%
 }
 .top-85s {
 	top: 85%
@@ -12668,7 +12899,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 86
 }
 .br-86s {
-	border-radius: 86%
+	-webkit-border-radius: 86%;
+	        border-radius: 86%
 }
 .top-86s {
 	top: 86%
@@ -12760,7 +12992,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 87
 }
 .br-87s {
-	border-radius: 87%
+	-webkit-border-radius: 87%;
+	        border-radius: 87%
 }
 .top-87s {
 	top: 87%
@@ -12852,7 +13085,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 88
 }
 .br-88s {
-	border-radius: 88%
+	-webkit-border-radius: 88%;
+	        border-radius: 88%
 }
 .top-88s {
 	top: 88%
@@ -12944,7 +13178,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 89
 }
 .br-89s {
-	border-radius: 89%
+	-webkit-border-radius: 89%;
+	        border-radius: 89%
 }
 .top-89s {
 	top: 89%
@@ -13036,7 +13271,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 90
 }
 .br-90s {
-	border-radius: 90%
+	-webkit-border-radius: 90%;
+	        border-radius: 90%
 }
 .top-90s {
 	top: 90%
@@ -13128,7 +13364,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 91
 }
 .br-91s {
-	border-radius: 91%
+	-webkit-border-radius: 91%;
+	        border-radius: 91%
 }
 .top-91s {
 	top: 91%
@@ -13220,7 +13457,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 92
 }
 .br-92s {
-	border-radius: 92%
+	-webkit-border-radius: 92%;
+	        border-radius: 92%
 }
 .top-92s {
 	top: 92%
@@ -13312,7 +13550,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 93
 }
 .br-93s {
-	border-radius: 93%
+	-webkit-border-radius: 93%;
+	        border-radius: 93%
 }
 .top-93s {
 	top: 93%
@@ -13404,7 +13643,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 94
 }
 .br-94s {
-	border-radius: 94%
+	-webkit-border-radius: 94%;
+	        border-radius: 94%
 }
 .top-94s {
 	top: 94%
@@ -13496,7 +13736,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 95
 }
 .br-95s {
-	border-radius: 95%
+	-webkit-border-radius: 95%;
+	        border-radius: 95%
 }
 .top-95s {
 	top: 95%
@@ -13588,7 +13829,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 96
 }
 .br-96s {
-	border-radius: 96%
+	-webkit-border-radius: 96%;
+	        border-radius: 96%
 }
 .top-96s {
 	top: 96%
@@ -13680,7 +13922,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 97
 }
 .br-97s {
-	border-radius: 97%
+	-webkit-border-radius: 97%;
+	        border-radius: 97%
 }
 .top-97s {
 	top: 97%
@@ -13772,7 +14015,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 98
 }
 .br-98s {
-	border-radius: 98%
+	-webkit-border-radius: 98%;
+	        border-radius: 98%
 }
 .top-98s {
 	top: 98%
@@ -13864,7 +14108,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 99
 }
 .br-99s {
-	border-radius: 99%
+	-webkit-border-radius: 99%;
+	        border-radius: 99%
 }
 .top-99s {
 	top: 99%
@@ -13956,7 +14201,8 @@ scroll-view.cu-steps .cu-item {
 	z-index: 100
 }
 .br-100s {
-	border-radius: 100%
+	-webkit-border-radius: 100%;
+	        border-radius: 100%
 }
 .top-100s {
 	top: 100%
@@ -26403,7 +26649,7 @@ scroll-view.cu-steps .cu-item {
 .min-w499 {
 	min-width: 499px
 }
-/* 透明度设置 */
+	/* 透明度设置 */
 .opa-xx1 {
 	opacity: 0.01
 }
@@ -26704,7 +26950,7 @@ scroll-view.cu-steps .cu-item {
 .opa-1xx {
 	opacity: 1.00
 }
-/* 定位设置 */
+	/* 定位设置 */
 .pos-abs {
 	position: absolute
 }
@@ -26714,7 +26960,7 @@ scroll-view.cu-steps .cu-item {
 .pos-rel {
 	position: relative
 }
-/* 盒子百分百 */
+	/* 盒子百分百 */
 .margin-1s {
 	margin: 1%
 }
@@ -29716,12 +29962,58 @@ scroll-view.cu-steps .cu-item {
 	padding-right: 100%
 }
 .btu_bg{
+	background:-webkit-gradient(linear,left top, left bottom,from(rgba(214,180,108,1)),to(rgba(204,162,62,1)));
 	background:-webkit-linear-gradient(top,rgba(214,180,108,1) 0%,rgba(204,162,62,1) 100%);
 	background:linear-gradient(180deg,rgba(214,180,108,1) 0%,rgba(204,162,62,1) 100%);
-	border-radius:25px;
+	-webkit-border-radius:25px;
+	        border-radius:25px;
 }
 .cu-border-top {
 	border-top: 1rpx solid #eee;
 }
-/*每个页面公共css */
+@font-face {
+  font-family: 'iconfont';  /* project id 840721 */
+  src: url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.eot');
+  src: url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_840721_1qg7ntsguer.svg#iconfont') format('svg');
+}
+text[class*="icon-"],
+view[class*="icon-"],
+button[class*="icon-"] {
+  font-family: "iconfont";
+  font-size: inherit;
+  font-style: normal;
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-Mask:before {
+  content: "\e633";
+}
+.icon-back:before {
+  content: "\e697";
+}
+.icon-car:before {
+  content: "\e602";
+}
+.icon-sousuo:before {
+  content: "\e693";
+}
+.icon-info-circle:before {
+  content: "\e77f";
+}
+.icon-check-circle:before {
+  content: "\e77e";
+}
+.icon-close-circle:before {
+  content: "\e77d";
+}
+	/*每个页面公共css */
 

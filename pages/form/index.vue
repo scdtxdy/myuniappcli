@@ -2,181 +2,61 @@
     <view>
         <cu-custom bgColor="bg-gradual-pink" :isBack="false">
             <block slot="backText">返回</block>
-            <block slot="content">表单</block>
+            <block slot="content">首页</block>
         </cu-custom>
-        <form>
-            <view class="cu-form-group">
-                <view class="title">邮件</view>
-                <input placeholder="两字短标题" name="input"></input>
-            </view>
-            <view class="cu-form-group">
-                <view class="title">输入框</view>
-                <input placeholder="三字标题" name="input"></input>
-            </view>
-            <view class="cu-form-group">
-                <view class="title">收货地址</view>
-                <input placeholder="统一标题的宽度" name="input"></input>
-            </view>
-            <view class="cu-form-group">
-                <view class="title">收货地址</view>
-                <input placeholder="输入框带个图标" name="input"></input>
-                <text class='cuIcon-locationfill text-orange'></text>
-            </view>
-            <view class="cu-form-group">
-                <view class="title">验证码</view>
-                <input placeholder="输入框带个按钮" name="input"></input>
-                <button class='cu-btn bg-green shadow'>验证码</button>
-            </view>
-            <view class="cu-form-group">
-                <view class="title">手机号码</view>
-                <input placeholder="输入框带标签" name="input"></input>
-                <view class="cu-capsule radius">
-                    <view class='cu-tag bg-blue '>
-                        +86
-                    </view>
-                    <view class="cu-tag line-blue">
-                        中国大陆
-                    </view>
-                </view>
-            </view>
-            <view class="cu-form-group margin-top">
-                <view class="title">普通选择</view>
-                <picker @change="PickerChange" :value="index" :range="picker">
-                    <view class="picker">
-                        {{index>-1?picker[index]:'禁止换行，超出容器部分会以 ... 方式截断'}}
-                    </view>
-                </picker>
-            </view>
-            <!-- #ifndef MP-ALIPAY -->
-            <view class="cu-form-group">
-                <view class="title">多列选择</view>
-                <picker mode="multiSelector" @change="MultiChange" @columnchange="MultiColumnChange" :value="multiIndex" :range="multiArray">
-                    <view class="picker">
-                        {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
-                    </view>
-                </picker>
-            </view>
-            <!-- #endif -->
-            <view class="cu-form-group">
-                <view class="title">时间选择</view>
-                <picker mode="time" :value="time" start="09:01" end="21:01" @change="TimeChange">
-                    <view class="picker">
-                        {{time}}
-                    </view>
-                </picker>
-            </view>
-            <view class="cu-form-group">
-                <view class="title">日期选择</view>
-                <picker mode="date" :value="date" start="2015-09-01" end="2020-09-01" @change="DateChange">
-                    <view class="picker">
-                        {{date}}
-                    </view>
-                </picker>
-            </view>
-            <!-- #ifndef H5 || APP-PLUS || MP-ALIPAY -->
-            <view class="cu-form-group">
-                <view class="title">地址选择</view>
-                <picker mode="region" @change="RegionChange" :value="region">
-                    <view class="picker">
-                        {{region[0]}}，{{region[1]}}，{{region[2]}}
-                    </view>
-                </picker>
-            </view>
-            <!-- #endif -->
-            <view class="cu-form-group margin-top">
-                <view class="title">开关选择</view>
-                <switch @change="SwitchA" :class="switchA?'checked':''" :checked="switchA?true:false"></switch>
-            </view>
-            <view class="cu-form-group">
-                <view class="title">定义颜色</view>
-                <!-- #ifdef MP-ALIPAY -->
-                <switch class='red' @change="SwitchB" :class="switchB?'checked':''" :checked="switchB?true:false" color="#e54d42"></switch>
-                <!-- #endif -->
+        <!-- :rules="rules" -->
+        <uni-forms v-model="formData" ref="form" validate-trigger="bind" @submit="submit" err-show-type="undertext" @validate="validate">
+            <uni-group title="基本信息">
+                <uni-forms-item required name="name" label="用户名">
+                    <input type="text" v-model="formData.name" class="uni-input-border" placeholder="请输入用户名" @input="binddata('name',$event.detail.value)">
+                </uni-forms-item>
+                <uni-forms-item required name="age" label="年龄">
+                    <input type="text" :value="formData.age" class="uni-input-border" placeholder="请输入年龄" @input="binddata('age',$event.detail.value)">
+                </uni-forms-item>
+                <uni-forms-item required name="email" label="邮箱">
+                    <input type="text" :value="formData.email" class="uni-input-border" placeholder="请输入邮箱" @blur="binddata('email',$event.detail.value)">
+                </uni-forms-item>
+                <uni-forms-item label="详细信息">
+                    <switch :checked="formData.checked" @change="change" />
+                </uni-forms-item>
+            </uni-group>
+            <template v-if="formData.checked">
+                <uni-group title="详细信息">
+                    <uni-forms-item required name="sex" label="性别">
+                        <radio-group @change="binddata('sex',$event.detail.value)">
+                            <label class="label-box">
+                                <radio class="transform-scale" :checked="formData.sex === '0'" value="0" /><text>男</text>
+                            </label>
+                            <label class="label-box">
+                                <radio class="transform-scale" :checked="formData.sex === '1'" value="1" /><text>女</text>
+                            </label>
+                        </radio-group>
+                    </uni-forms-item>
+                    <uni-forms-item required name="hobby" label="兴趣爱好">
+                        <checkbox-group @change="binddata('hobby',$event.detail.value)">
+                            <label class="label-box" v-for="item in hobby" :key="item.value">
+                                <checkbox class="transform-scale" :checked="formData.hobby.indexOf(item.value) !== -1" :value="item.value" /><text>{{item.name}}</text>
+                            </label>
 
-                <!-- #ifndef MP-ALIPAY -->
-                <switch class='red' @change="SwitchB" :class="switchB?'checked':''" :checked="switchB?true:false"></switch>
-                <!-- #endif -->
+                        </checkbox-group>
+                    </uni-forms-item>
+                    <uni-forms-item name="remarks" label="备注">
+                        <textarea type="text" v-model="formData.remarks" :maxlength="50" class="uni-textarea-border" placeholder="请输入备注" @input="binddata('remarks',$event.detail.value)"></textarea>
+                    </uni-forms-item>
+                </uni-group>
+
+            </template>
+
+            <!-- 直接使用组件自带submit、reset 方法，小程序不生效 -->
+            <!-- <button class="button" form-type="submit">Submit</button>-->
+            <button class="button" @click="reset('form')">Reset</button>
+            <view class="example">
+                <button class="button" @click="submitForm('form')">校验表单</button>
+                <button class="button" @click="validateField('form')">只校验用户名和邮箱项</button>
+                <button class="button" @click="clearValidate('form','name')">移除用户名的校验结果</button>
+                <button class="button" @click="clearValidate('form')">移除全部表单校验结果</button>
             </view>
-            <view class="cu-form-group">
-                <view class="title">定义图标</view>
-                <switch class='switch-sex' @change="SwitchC" :class="switchC?'checked':''" :checked="switchC?true:false"></switch>
-            </view>
-            <!-- #ifndef MP-ALIPAY -->
-            <view class="cu-form-group">
-                <view class="title">方形开关</view>
-                <switch class='orange radius' @change="SwitchD" :class="switchD?'checked':''" :checked="switchD?true:false"></switch>
-            </view>
-            <!-- #endif -->
-            <radio-group class="block" @change="RadioChange">
-                <view class="cu-form-group margin-top">
-                    <view class="title">单选操作(radio)</view>
-                    <radio :class="radio=='A'?'checked':''" :checked="radio=='A'?true:false" value="A"></radio>
-                </view>
-                <!-- #ifndef MP-ALIPAY -->
-                <view class="cu-form-group">
-                    <view class="title">定义样式</view>
-                    <radio class='radio' :class="radio=='B'?'checked':''" :checked="radio=='B'?true:false" value="B"></radio>
-                </view>
-                <view class="cu-form-group">
-                    <view class="title">定义颜色</view>
-                    <view>
-                        <radio class='blue radio' :class="radio=='C'?'checked':''" :checked="radio=='C'?true:false" value="C"></radio>
-                        <radio class='red margin-left-sm' :class="radio=='D'?'checked':''" :checked="radio=='D'?true:false" value="D"></radio>
-                    </view>
-                </view>
-                <!-- #endif -->
-            </radio-group>
-            <checkbox-group class="block" @change="CheckboxChange">
-                <view class="cu-form-group margin-top">
-                    <view class="title">复选选操作(checkbox)</view>
-                    <checkbox :class="checkbox[0].checked?'checked':''" :checked="checkbox[0].checked?true:false" value="A"></checkbox>
-                </view>
-                <!-- #ifndef MP-ALIPAY -->
-                <view class="cu-form-group">
-                    <view class="title">定义形状</view>
-                    <checkbox class='round' :class="checkbox[1].checked?'checked':''" :checked="checkbox[1].checked?true:false" value="B"></checkbox>
-                </view>
-                <view class="cu-form-group">
-                    <view class="title">定义颜色</view>
-                    <checkbox class='round blue' :class="checkbox[2].checked?'checked':''" :checked="checkbox[2].checked?true:false"
-                              value="C"></checkbox>
-                </view>
-                <!-- #endif -->
-            </checkbox-group>
-            <view class="cu-bar bg-white margin-top">
-                <view class="action">
-                    图片上传
-                </view>
-                <view class="action">
-                    {{imgList.length}}/4
-                </view>
-            </view>
-            <view class="cu-form-group">
-                <view class="grid col-4 grid-square flex-sub">
-                    <view class="bg-img" v-for="(item,index) in imgList" :key="index" @tap="ViewImage" :data-url="imgList[index]">
-                        <image :src="imgList[index]" mode="aspectFill"></image>
-                        <view class="cu-tag bg-red" @tap.stop="DelImg" :data-index="index">
-                            <text class='cuIcon-close'></text>
-                        </view>
-                    </view>
-                    <view class="solids" @tap="ChooseImage" v-if="imgList.length<4">
-                        <text class='cuIcon-cameraadd'></text>
-                    </view>
-                </view>
-            </view>
-            <view class="cu-form-group margin-top">
-                <view class="title">头像</view>
-                <view class="cu-avatar radius bg-gray"></view>
-            </view>
-            <!-- !!!!! placeholder 在ios表现有偏移 建议使用 第一种样式 -->
-            <view class="cu-form-group margin-top">
-                <textarea maxlength="-1" :disabled="modalName!=null" @input="textareaAInput" placeholder="多行文本输入框"></textarea>
-            </view>
-            <view class="cu-form-group align-start">
-                <view class="title">文本框</view>
-                <textarea maxlength="-1" :disabled="modalName!=null" @input="textareaBInput" placeholder="多行文本输入框"></textarea>
-            </view>
-        </form>
+        </uni-forms>
     </view>
 </template>
 
@@ -184,230 +64,292 @@
     export default {
         data() {
             return {
-                index: -1,
-                picker: ['喵喵喵', '汪汪汪', '哼唧哼唧'],
-                multiArray: [
-                    ['无脊柱动物', '脊柱动物'],
-                    ['扁性动物', '线形动物', '环节动物', '软体动物', '节肢动物'],
-                    ['猪肉绦虫', '吸血虫']
-                ],
-                objectMultiArray: [
-                    [{
-                        id: 0,
-                        name: '无脊柱动物'
-                    },
-                        {
-                            id: 1,
-                            name: '脊柱动物'
-                        }
-                    ],
-                    [{
-                        id: 0,
-                        name: '扁性动物'
-                    },
-                        {
-                            id: 1,
-                            name: '线形动物'
-                        },
-                        {
-                            id: 2,
-                            name: '环节动物'
-                        },
-                        {
-                            id: 3,
-                            name: '软体动物'
-                        },
-                        {
-                            id: 3,
-                            name: '节肢动物'
-                        }
-                    ],
-                    [{
-                        id: 0,
-                        name: '猪肉绦虫'
-                    },
-                        {
-                            id: 1,
-                            name: '吸血虫'
-                        }
-                    ]
-                ],
-                multiIndex: [0, 0, 0],
-                time: '12:01',
-                date: '2018-12-25',
-                region: ['广东省', '广州市', '海珠区'],
-                switchA: false,
-                switchB: true,
-                switchC: false,
-                switchD: false,
-                radio: 'A',
-                checkbox: [{
-                    value: 'A',
-                    checked: true
-                }, {
-                    value: 'B',
-                    checked: true
-                }, {
-                    value: 'C',
+                formData: {
+                    name: '',
+                    age: '',
+                    email: "",
+                    sex: '',
+                    hobby: [],
+                    remarks: "",
                     checked: false
+                },
+                hobby: [{
+                    name: '足球',
+                    value: "0"
+                }, {
+                    name: '篮球',
+                    value: "1"
+                }, {
+                    name: '游泳',
+                    value: "2"
                 }],
-                imgList: [],
-                modalName: null,
-                textareaAValue: '',
-                textareaBValue: ''
-            };
+                show: false,
+                rules: {
+                    name: {
+                        rules: [{
+                            // required: true,
+                            errorMessage: '请输入用户名',
+                        }, {
+                            minLength: 3,
+                            maxLength: 15,
+                            errorMessage: '姓名长度在 {minLength} 到 {maxLength} 个字符',
+                        }]
+                    },
+                    age: {
+                        rules: [{
+                            required: true,
+                            errorMessage: '请填写年龄',
+                        }, {
+                            format: 'number',
+                            errorMessage: '年龄必须是数字',
+                        }, {
+                            minimum: 18,
+                            maximum: 30,
+                            errorMessage: '年龄应该大于 {minimum} 岁，小于 {maximum} 岁',
+                        }]
+                    },
+                    email: {
+                        rules: [{
+                            format: 'email',
+                            errorMessage: '请输入正确的邮箱地址',
+                            trigger: 'blur'
+                        }]
+                    },
+                    sex: {
+                        rules: [{
+                            required: true,
+                            errorMessage: '请选择性别',
+                            trigger: "blur"
+                        }]
+                    },
+                    hobby: {
+                        rules: [{
+                            required: true,
+                            errorMessage: '请选择兴趣',
+                            trigger: "blur"
+                        }, {
+                            validateFunction: function(rule, value, data, callback) {
+                                if (value.length < 2) {
+                                    callback(new Error('请至少勾选两个兴趣爱好'))
+                                }
+                                return true
+                            }
+                        }]
+                    }
+                }
+            }
         },
         methods: {
-            PickerChange(e) {
-                this.index = e.detail.value
+            change(event) {
+                this.formData.checked = event.detail.value
             },
-            MultiChange(e) {
-                this.multiIndex = e.detail.value
+
+            /**
+             * 触发校验
+             * @param {Object} event
+             */
+            validate(event) {
+                // TODO 返回校验结果
+                // console.log('触发校验：', event);
             },
-            MultiColumnChange(e) {
-                let data = {
-                    multiArray: this.multiArray,
-                    multiIndex: this.multiIndex
-                };
-                data.multiIndex[e.detail.column] = e.detail.value;
-                switch (e.detail.column) {
-                    case 0:
-                        switch (data.multiIndex[0]) {
-                            case 0:
-                                data.multiArray[1] = ['扁性动物', '线形动物', '环节动物', '软体动物', '节肢动物'];
-                                data.multiArray[2] = ['猪肉绦虫', '吸血虫'];
-                                break;
-                            case 1:
-                                data.multiArray[1] = ['鱼', '两栖动物', '爬行动物'];
-                                data.multiArray[2] = ['鲫鱼', '带鱼'];
-                                break;
-                        }
-                        data.multiIndex[1] = 0;
-                        data.multiIndex[2] = 0;
-                        break;
-                    case 1:
-                        switch (data.multiIndex[0]) {
-                            case 0:
-                                switch (data.multiIndex[1]) {
-                                    case 0:
-                                        data.multiArray[2] = ['猪肉绦虫', '吸血虫'];
-                                        break;
-                                    case 1:
-                                        data.multiArray[2] = ['蛔虫'];
-                                        break;
-                                    case 2:
-                                        data.multiArray[2] = ['蚂蚁', '蚂蟥'];
-                                        break;
-                                    case 3:
-                                        data.multiArray[2] = ['河蚌', '蜗牛', '蛞蝓'];
-                                        break;
-                                    case 4:
-                                        data.multiArray[2] = ['昆虫', '甲壳动物', '蛛形动物', '多足动物'];
-                                        break;
-                                }
-                                break;
-                            case 1:
-                                switch (data.multiIndex[1]) {
-                                    case 0:
-                                        data.multiArray[2] = ['鲫鱼', '带鱼'];
-                                        break;
-                                    case 1:
-                                        data.multiArray[2] = ['青蛙', '娃娃鱼'];
-                                        break;
-                                    case 2:
-                                        data.multiArray[2] = ['蜥蜴', '龟', '壁虎'];
-                                        break;
-                                }
-                                break;
-                        }
-                        data.multiIndex[2] = 0;
-                        break;
+
+            /**
+             * 表单提交
+             * @param {Object} event
+             */
+            submit(event) {
+                const {
+                    errors,
+                    value
+                } = event.detail
+                if (errors) {
+                    console.error('验证失败', errors);
+                    return
                 }
-                this.multiArray = data.multiArray;
-                this.multiIndex = data.multiIndex;
+                uni.showToast({
+                    title: '验证成功'
+                })
+                console.log("表单的值:", value);
             },
-            TimeChange(e) {
-                this.time = e.detail.value
+
+            /**
+             * 手动提交
+             * @param {Object} form
+             */
+            submitForm(form) {
+                this.$refs[form].submit()
             },
-            DateChange(e) {
-                this.date = e.detail.value
+
+            reset(form){
+                this.formData = {name: '',
+                    age: '',
+                    email: "",
+                    sex: '',
+                    hobby: [],
+                    remarks: "",
+                    checked: true}
             },
-            RegionChange(e) {
-                this.region = e.detail.value
-            },
-            SwitchA(e) {
-                this.switchA = e.detail.value
-            },
-            SwitchB(e) {
-                this.switchB = e.detail.value
-            },
-            SwitchC(e) {
-                this.switchC = e.detail.value
-            },
-            SwitchD(e) {
-                this.switchD = e.detail.value
-            },
-            RadioChange(e) {
-                this.radio = e.detail.value
-            },
-            CheckboxChange(e) {
-                var items = this.checkbox,
-                    values = e.detail.value;
-                for (var i = 0, lenI = items.length; i < lenI; ++i) {
-                    items[i].checked = false;
-                    for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
-                        if (items[i].value == values[j]) {
-                            items[i].checked = true;
-                            break
-                        }
-                    }
-                }
-            },
-            ChooseImage() {
-                uni.chooseImage({
-                    count: 4, //默认9
-                    sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
-                    sourceType: ['album'], //从相册选择
-                    success: (res) => {
-                        if (this.imgList.length != 0) {
-                            this.imgList = this.imgList.concat(res.tempFilePaths)
-                        } else {
-                            this.imgList = res.tempFilePaths
-                        }
-                    }
-                });
-            },
-            ViewImage(e) {
-                uni.previewImage({
-                    urls: this.imgList,
-                    current: e.currentTarget.dataset.url
-                });
-            },
-            DelImg(e) {
-                uni.showModal({
-                    title: '召唤师',
-                    content: '确定要删除这段回忆吗？',
-                    cancelText: '再看看',
-                    confirmText: '再见',
-                    success: res => {
-                        if (res.confirm) {
-                            this.imgList.splice(e.currentTarget.dataset.index, 1)
-                        }
+            /**
+             * 部分表单校验
+             * @param {Object} form
+             */
+            validateField(form) {
+                this.$refs[form].validateField(['name', 'email'], (errors) => {
+                    console.log(errors);
+                    if (errors) {
+                        uni.showToast({
+                            title: '验证成功'
+                        })
                     }
                 })
             },
-            textareaAInput(e) {
-                this.textareaAValue = e.detail.value
-            },
-            textareaBInput(e) {
-                this.textareaBValue = e.detail.value
+
+            /**
+             * 清除表单校验
+             * @param {Object} form
+             * @param {Object} name
+             */
+            clearValidate(form, name) {
+                if (!name) name = []
+                this.$refs[form].clearValidate(name)
             }
+        },
+        onLoad() {
+            uni.showLoading()
+            // this.formData 应该包含所有需要校验的表单
+            // 模拟异步请求数据
+            setTimeout(() => {
+
+                this.formData = {
+                    name: 'LiMing',
+                    age: 1,
+                    email: "",
+                    sex: '',
+                    hobby: ['0', '2'],
+                    remarks: "热爱学习，热爱生活",
+                    checked: true
+                }
+
+                uni.hideLoading()
+            }, 1000)
+        },
+        onReady() {
+            this.$refs.form.setRules(this.rules)
         }
     }
 </script>
 
-<style>
-    .cu-form-group .title {
-        min-width: calc(4em + 15px);
+<style lang="scss">
+    view {
+        font-size: 14px;
+        line-height: inherit;
+    }
+
+    .example {
+        padding: 0 15px 15px;
+    }
+
+    .example-info {
+        padding: 15px;
+        color: #3b4144;
+        background: #ffffff;
+    }
+
+    .example-body {
+        /* #ifndef APP-NVUE */
+        display: flex;
+        /* #endif */
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+
+    /* #endif */
+    .example {
+        padding: 0 15px;
+    }
+
+    .example-info {
+        /* #ifndef APP-NVUE */
+        display: block;
+        /* #endif */
+        padding: 15px;
+        color: #3b4144;
+        background-color: #ffffff;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .example-info-text {
+        font-size: 14px;
+        line-height: 20px;
+        color: #3b4144;
+    }
+
+    .example-body {
+        flex-direction: column;
+        padding: 15px;
+        background-color: #ffffff;
+    }
+
+    .word-btn-white {
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+
+    .word-btn {
+        /* #ifndef APP-NVUE */
+        display: flex;
+        /* #endif */
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        height: 48px;
+        margin: 15px;
+        background-color: #007AFF;
+    }
+
+    .word-btn--hover {
+        background-color: #4ca2ff;
+    }
+
+    .example {
+        padding: 0 10px 10px;
+    }
+
+    .uni-input-border,
+    .uni-textarea-border {
+        width: 100%;
+        font-size: 14px;
+        color: #666;
+        border: 1px #e5e5e5 solid;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .uni-input-border {
+        padding: 0 10px;
+        height: 35px;
+    }
+
+    .uni-textarea-border {
+        padding: 10px;
+        height: 80px;
+    }
+
+    .label-box {
+        margin-right: 10px;
+    }
+
+    .transform-scale {
+        transform: scale(0.7);
+    }
+
+    .button {
+        margin: 10px auto;
     }
 </style>

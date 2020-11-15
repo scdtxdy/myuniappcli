@@ -10,22 +10,26 @@
   "libVersion": "",
   "appid": "wxb6905d453a122bb0",
   "projectname": "myuniappcli",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
+    "plugin": {
       "list": []
     },
     "game": {
-      "current": -1,
+      "list": []
+    },
+    "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "current": -1,
-      "list": []
+      "list": [
+        {
+          "name": "pages/form/index",
+          "pathName": "pages/form/index",
+          "scene": null
+        }
+      ]
     }
   }
 }

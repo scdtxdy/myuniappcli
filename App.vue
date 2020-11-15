@@ -120,5 +120,6 @@
 	@import "colorui/icon.css";
 	@import "colorui/fontSize.css";
 	@import "colorui/globle.css";
+    @import "static/css/iconfont.css";
 	/*每个页面公共css */
 </style>
